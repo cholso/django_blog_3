@@ -3,7 +3,7 @@
 	{% comment %} here is where the query happens {% endcomment %}
 	{% for post in posts %}
 	<div class="post">
-		<a href="{% url 'blog detail' post.pk}"> {{ post }} </a>
+		<a href="{% url 'blog_detail' post.pk %}"> {{ post }} </a>
 		<p class="byline">
 			Posted by {{ post.author.username }} &mdash; {{ post.published_date }}
 		</p>
@@ -18,4 +18,3 @@
 	</div>
 	{% endfor %}
 {% endblock %}
-
