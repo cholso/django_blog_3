@@ -4,7 +4,7 @@ from django.template import loader
 from blogging.models import Post
 from django import forms
 from django.utils import timezone # Django ModelForm
-form blogging.forms import PostForm # Django ModelForm
+from blogging.forms import PostForm # Django ModelForm
 
 
 
