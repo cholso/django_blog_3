@@ -31,4 +31,15 @@ def detail_view(request, post_id):
     context = {'post': post}
     return render(request, 'blogging/detail.html', context)
 
+def add_post(request):
+    if request.method == "POST":
+        if form.is_valid():
+            model_instance = form.save(commit=False)
+            model_instance.timestamp = timezone.now()
+            model_instance.save()
+            return redirect('/')
+    else:
+        form = PostForm()
+        return render(request, "blogging/post.html", {'form':form})
+
 # Create your views here.
